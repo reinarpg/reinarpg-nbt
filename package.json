@@ -1,12 +1,12 @@
 {
-  "name": "prismarine-nbt",
+  "name": "reinarpg-nbt",
   "version": "2.5.0",
   "description": "A parser and serializer for NBT archives",
   "keywords": [
     "nbt",
     "minecraft"
   ],
-  "homepage": "https://github.com/prismarinejs/prismarine-nbt",
+  "homepage": "https://github.com/prismarinejs/reinarpg-nbt",
   "author": "roblabla <robinlambertz+dev@gmail.com>",
   "maintainers": [
     "roblabla <robinlambertz+dev@gmail.com",
@@ -18,7 +18,7 @@
   "types": "./typings/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/prismarinejs/prismarine-nbt.git"
+    "url": "https://github.com/prismarinejs/reinarpg-nbt.git"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",

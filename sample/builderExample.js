@@ -1,4 +1,4 @@
-const nbt = require('prismarine-nbt')
+const nbt = require('reinarpg-nbt')
 
 const writePlayerNbt = () => {}
 writePlayerNbt({

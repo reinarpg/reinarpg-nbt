@@ -1,5 +1,5 @@
 /// <reference types="node" resolution-mode="require"/>
-declare module 'prismarine-nbt'{
+declare module 'reinarpg-nbt'{
   // @ts-expect-error - protodef is untyped
   import type { Compiler, Interpreter } from "protodef";
 
@@ -85,9 +85,9 @@ declare module 'prismarine-nbt'{
   export const proto: any;
   // Little Endian protocol
   export const protoLE: any;
-  // Adds prismarine-nbt types to an ProtoDef compiler instance
+  // Adds reinarpg-nbt types to an ProtoDef compiler instance
   export function addTypesToCompiler(type: NBTFormat, compiler: Compiler): void;
-  // Adds prismarine-nbt types to a ProtoDef interpreter instance
+  // Adds reinarpg-nbt types to a ProtoDef interpreter instance
   export function addTypesToInterpreter(type: NBTFormat, protodef: Interpreter): void;
 
   /** @deprecated */

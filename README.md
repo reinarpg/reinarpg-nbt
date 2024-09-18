@@ -1,10 +1,10 @@
-# Prismarine-NBT
-[![NPM version](https://img.shields.io/npm/v/prismarine-nbt.svg)](http://npmjs.com/package/prismarine-nbt)
-[![Build Status](https://github.com/PrismarineJS/prismarine-nbt/workflows/CI/badge.svg)](https://github.com/PrismarineJS/prismarine-nbt/actions?query=workflow%3A%22CI%22)
+# reinarpg-nbt
+[![NPM version](https://img.shields.io/npm/v/reinarpg-nbt.svg)](http://npmjs.com/package/reinarpg-nbt)
+[![Build Status](https://github.com/PrismarineJS/reinarpg-nbt/workflows/CI/badge.svg)](https://github.com/PrismarineJS/reinarpg-nbt/actions?query=workflow%3A%22CI%22)
 [![Discord](https://img.shields.io/badge/chat-on%20discord-brightgreen.svg)](https://discord.gg/GsEFRM8)
-[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/PrismarineJS/prismarine-nbt)
+[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/PrismarineJS/reinarpg-nbt)
 
-Prismarine-NBT is a JavaScript parser and serializer for [NBT](http://wiki.vg/NBT) archives. It supports big, little, and little-varint encoded NBT files.
+reinarpg-nbt is a JavaScript parser and serializer for [NBT](http://wiki.vg/NBT) archives. It supports big, little, and little-varint encoded NBT files.
 
 
 ## Usage
@@ -13,7 +13,7 @@ Prismarine-NBT is a JavaScript parser and serializer for [NBT](http://wiki.vg/NB
 
 ```js
 const fs = require('fs')
-const nbt = require('prismarine-nbt')
+const nbt = require('reinarpg-nbt')
 
 async function main(file) {
   const buffer = fs.readFileSync(file)
@@ -28,7 +28,7 @@ main('bigtest.nbt')
 
 ```js
 var fs = require('fs'),
-    nbt = require('prismarine-nbt');
+    nbt = require('reinarpg-nbt');
 
 fs.readFile('bigtest.nbt', function(error, data) {
     if (error) throw error;
@@ -85,17 +85,17 @@ Provide the big-endian protodef instance used to parse and serialize nbt.
 Provide the little-endian protodef instance used to parse and serialize little endian nbt.
 
 ### addTypesToCompiler (type, compiler)
-Adds prismarine-nbt types to an ProtoDef compiler instance
+Adds reinarpg-nbt types to an ProtoDef compiler instance
 
 ### addTypesToInterpreter (type, interperter)
-Adds prismarine-nbt types to a ProtoDef interpreter instance
+Adds reinarpg-nbt types to a ProtoDef interpreter instance
 
 ### builder
 
 Provides a way to build complex nbt structures simply:
 
 ```js
-const nbt = require('prismarine-nbt')
+const nbt = require('reinarpg-nbt')
 const tag = nbt.comp({
   Air: nbt.short(300),
   Armor: nbt.list(nbt.comp([
@@ -113,14 +113,14 @@ See [index.d.ts](typings/index.d.ts#L69) for methods
 
 For webpack usage, see an example configuration [here](https://github.com/PrismarineJS/prismarine-web-client/blob/master/webpack.common.js#L28).
 
-For a web bundle with browserify (after you ran `npm install prismarine-nbt` in your project):
+For a web bundle with browserify (after you ran `npm install reinarpg-nbt` in your project):
 ```
-npx browserify -r prismarine-nbt -r buffer -o pnbt.js
+npx browserify -r reinarpg-nbt -r buffer -o pnbt.js
 ```
 ```html
 <script src="./pnbt.js"></script>
 <script>
-  const nbt = require('prismarine-nbt')
+  const nbt = require('reinarpg-nbt')
   const { Buffer } = require('buffer')
   fetch('test.nbt').then(resp => resp.arrayBuffer())
     .then(buf => nbt.parse(Buffer.from(buf))).then(console.log)
